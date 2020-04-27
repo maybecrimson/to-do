@@ -1,0 +1,44 @@
+@import "~bootstrap/scss/bootstrap";
+
+h2{
+  padding-top: 20px;
+}
+
+div{
+  padding-left: 20px;
+  hr{
+    width: 320px;
+  }
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 20px;
+  width: 300px;
+  li{
+    padding-bottom: 10px;
+    font-weight: 700;
+  }
+}
+
+.deleteButton{
+  background-color: white;
+  border: white;
+  font-weight: 700;
+  display: inline-block;
+  float: right;
+}
+
+.saveButton{
+margin-left: 20px;
+background-color: white;
+border-radius: 3px;
+border-color: rgb(182, 182, 182);
+border-style: solid;
+}
+
+.inputTask{
+  border-radius: 3px;
+  border-color: rgb(182, 182, 182);
+  border-style: solid;
+}
