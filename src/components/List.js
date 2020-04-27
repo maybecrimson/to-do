@@ -15,7 +15,7 @@ export const List = ({ list, onChangeBox, handleDel }) => (
           defaultChecked={item.done}
         />{" "}
         {item.name}
-        <Button klass="deleteButton" onClick={() => handleDel(item)}>D</Button>
+        <Button klass="deleteButton" active={true} onClick={() => handleDel(item)}>D</Button>
       </li>
     ))}
   </ul>
