@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { List } from "./components/List";
 import { Input } from "./components/Input";
 import { Button } from "./components/Button";
-import {store} from "./store";
 import './App.scss';
 
 export default class App extends Component {
