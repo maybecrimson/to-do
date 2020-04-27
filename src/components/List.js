@@ -1,22 +1,29 @@
 import React from "react";
+import { connect } from 'react-redux';
 import './Styling.scss';
 import { Checkbox } from "./Checkbox";
 import { Button } from "./Button";
 
-export const List = ({ list, onChangeBox, handleDel }) => (
-  <ul>
-    {list.map(item => (
+const getTodo = (state) => {
+  return state
+}
+
+const List = ({todos}) => {
+  {console.log(todos)}
+  return (<ul>
+    {todos.map(item => (
       <li
         key={item.id}
         style={{ textDecoration: item.done ? "line-through" : null }}
       >
         <Checkbox
-          onClick={() => onChangeBox(item)}
           defaultChecked={item.done}
         />{" "}
         {item.name}
-        <Button klass="deleteButton" onClick={() => handleDel(item)}>D</Button>
+        <Button klass="deleteButton">D</Button>
       </li>
     ))}
-  </ul>
-);
+    </ul>)
+};
+
+export default connect(getTodo)(List)

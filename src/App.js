@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { List } from "./components/List";
+import List from "./components/List";
 import { Input } from "./components/Input";
 import { Button } from "./components/Button";
+import AddTodo from "./components/AddTodo";
 import {store} from "./store";
 import './App.scss';
 
@@ -52,10 +53,7 @@ export default class App extends Component {
       <div>
         <h2>To Do List</h2>
         <br></br>
-        <form>
-          <Input value={todoText} onChange={this.onChangeInput} onClick={this.onSubmitTodo} />
-          <Button klass="saveButton" active={this.canSave()} onClick={this.onSubmitTodo}>Save</Button>
-        </form>
+        <AddTodo/>
         <hr width="50%" align="left"></hr>
         <List
           list={todos}
