@@ -1,27 +1,21 @@
 import React from "react";
 import { connect } from 'react-redux';
 import './Styling.scss';
-import { Checkbox } from "./Checkbox";
-import { Button } from "./Button";
+import Row from "./Row";
 
 const getTodo = (state) => {
-  return state
+  return {todos: state.todos}
+}
+
+const dispatchDelete = () => {
+
 }
 
 const List = ({todos}) => {
-  {console.log(todos)}
+  
   return (<ul>
     {todos.map(item => (
-      <li
-        key={item.id}
-        style={{ textDecoration: item.done ? "line-through" : null }}
-      >
-        <Checkbox
-          defaultChecked={item.done}
-        />{" "}
-        {item.name}
-        <Button klass="deleteButton">D</Button>
-      </li>
+      <Row item={item}/>
     ))}
     </ul>)
 };

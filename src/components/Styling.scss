@@ -5,15 +5,16 @@ h2{
 }
 
 div{
-  padding-left: 20px;
+  padding-left: 10px;
   hr{
-    width: 320px;
+    width: 280px;
+    margin-left: 20px;
   }
 }
 
 ul{
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 0px;
   width: 300px;
   li{
     padding-bottom: 10px;
@@ -41,4 +42,5 @@ border-style: solid;
   border-radius: 3px;
   border-color: rgb(182, 182, 182);
   border-style: solid;
+  
 }

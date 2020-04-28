@@ -1,6 +1,5 @@
-import React from 'react'
 import { createStore } from 'redux'
-import { ADD_TODO } from './actions'
+import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from './actions'
 
 let count = 4;
 
@@ -17,11 +16,28 @@ const toDoReducer = (initalState=_initalState, action) => {
     switch (action.type) {
         case ADD_TODO: {
             const newState = {
-                ...initalState
+                todos: initalState.todos.slice()
             }
             newState.todos.push({ id: ++count, name: action.text, done: false })
             return newState;
         }  
+        case DELETE_TODO: {
+            const newState = {
+                todos: initalState.todos.filter(item => item.id != action.id)
+            }
+            return newState;
+        } 
+        case TOGGLE_TODO: {
+            const newState = {
+                todos: initalState.todos.map(item => {
+                   if(item.id == action.id){
+                    item.done = !item.done
+                   }
+                   return item
+                })
+            }
+            return newState;
+        } 
         default: 
             return initalState;
     };
