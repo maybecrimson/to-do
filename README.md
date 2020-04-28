@@ -1,6 +1,6 @@
 # To Do App
 
-A simple ToDo App. 
+A simple ToDo App.<br><br>
 You can input a string and add it to the list. Check tasks that are done or delete tasks to start anew.
 
 ### Versions
@@ -11,7 +11,7 @@ There are two branches:
 
 ### Try it!
 
-In the project directory, you can run:
+In the project directory, you can run:<br>
 `npm start`
 
 Runs the app in the development mode.
